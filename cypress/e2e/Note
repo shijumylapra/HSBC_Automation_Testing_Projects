@@ -1,0 +1,30 @@
+
+ //Validate HSBC Bank Logo
+   // cy.wait(1000);
+    //cy.get('div.header-logo>a>img').click();
+   // Validate Home Page Title = HSBC India - Credit Cards, NRI Services, Saving
+   cy.title().should('eq','HSBC India - Credit Cards, NRI Services, Saving and Deposit');
+  //Click on Login button
+ // cy.get('a[href*="/security/"]').click();
+  //cy.get('input[title="Login"]').click();
+  cy.contains('Log On').click({force:true});
+  cy.contains('Continue to log on with browser').click({force: true});
+  
+  //cy.get('input[name="username"]').type('name');
+
+ // cy.get('*[class^="Continue to log on with browser"]')
+ cy.get('button[id="username_submit_btn"]').should('be.disabled');
+ 
+ //cy.get('button[id="username_submit_btn"]').should('be.enabled');
+
+ cy.contains('View help for username').click({force: true});
+ cy.get('div[id="applicationTitle"]').should('be.visible');
+ cy.get('.close-submenu-trigger');
+
+
+
+
+ //cy.get('div').should('have.text', 'Username | Log on | HSBC')
+
+ //cy.get("input[name=name]").type('shiju@gmail.com{enter}')
+ //cy.get('button[id="username_submit_btn"]').click()
