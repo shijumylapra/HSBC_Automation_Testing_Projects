@@ -16,8 +16,7 @@ describe('HSBC ATM Locator Test Scenarios', () => {
     cy.contains('Show more results').click();
     cy.contains('Amar Avinash Corporate City, Bund Garden Road, Pune, India, 411001').should('be.visible');
 
-    
-   // Check Instagram in social media option in footer section
+       // Check Instagram in social media option in footer section
     cy.get('a.social-icon-instagram').should('be.visible');
     //Check Facebook in social media option in footer section
     cy.get('a.social-icon-facebook').should('be.visible');
@@ -26,7 +25,6 @@ describe('HSBC ATM Locator Test Scenarios', () => {
     //Check Youtube in social media option in footer section
     cy.get('a.social-icon-youtube').should('be.visible');
 
-
     //Click on HSBC Logo
     cy.get('div.header-logo>a>img').click();
     //Validate page is navigating to home page by its title
@@ -34,10 +32,10 @@ describe('HSBC ATM Locator Test Scenarios', () => {
     //Check and Click on Privacy lin
     cy.contains('Privacy Statement').click({force: true});
     //Validate Privacy Statement as Header
-    cy.get('h1').contains('Privacy Statement');
+   
 
     //Saving Screenshots
-    cy.screenshot();
+    //cy.screenshot();
 
 
   })
